@@ -1,0 +1,27 @@
+{
+  "name": "ferry/ferry-mvc",
+  "description": "Lightweight PHP MVC framework",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "mvc",
+    "framework",
+    "php",
+    "router"
+  ],
+  "authors": [
+    {
+      "name": "Ferry Hasan",
+      "email": "ferryhasanbackup@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/"
+    },
+    "files": [
+      "App/functions.php"
+    ]
+  },
+  "require": {}
+}
