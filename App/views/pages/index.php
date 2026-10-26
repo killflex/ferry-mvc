@@ -1,18 +1,5 @@
-<?php
+<?php include approot('views/partials/_header.php'); ?>
 
-?>
-<!DOCTYPE html>
-<html lang="en">
+<h1><?= isset($title) ? e($title) : 'Welcome to Pages page' ?></h1>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= isset($title) ? e($title) : 'Pages';  ?></title>
-</head>
-
-<body>
-    <h1><?= isset($title) ? e($title) : 'Pages'; ?></h1>
-
-</body>
-
-</html>
+<?php include approot('views/partials/_footer.php'); ?>

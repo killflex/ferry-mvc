@@ -15,7 +15,17 @@ function e(mixed $value)
     echo htmlspecialchars((string) $value);
 }
 
-function base_url(string $path = ''): string
+function urlroot(string $path = ''): string
 {
     return '/ferry-mvc/' . ltrim($path, '/');
+}
+
+function approot(string $path = ''): string
+{
+    return dirname(dirname(__FILE__)) . $path;
+}
+
+function partials(string $path = ''): string
+{
+    return dirname(dirname(__FILE__)) . '/App/views/partials/' . ltrim($path, '/');
 }
