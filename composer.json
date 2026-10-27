@@ -20,7 +20,8 @@
       "App\\": "App/"
     },
     "files": [
-      "App/functions.php"
+      "App/functions.php",
+      "App/Config/config.php"
     ]
   },
   "require": {}

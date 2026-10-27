@@ -10,9 +10,9 @@ function dd(mixed $value)
     die();
 }
 
-function e(mixed $value)
+function e(string $value)
 {
-    echo htmlspecialchars((string) $value);
+    echo htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 }
 
 function urlroot(string $path = ''): string

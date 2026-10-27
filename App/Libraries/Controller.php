@@ -16,7 +16,7 @@ class Controller
     // load model
     protected function model(string $model): object
     {
-        $modelName = ucfirst(strtolower($model)) . 'Model';
+        $modelName = ucfirst(strtolower($model));
         $modelClass = 'App\\Models\\' . $modelName;
 
         if (!class_exists($modelClass)) {
@@ -40,7 +40,6 @@ class Controller
 
         ob_start();
         require $viewPath;
-
         return ob_get_clean();
     }
 }
