@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= urlroot('css/style.css') ?>">
-    <title><?= isset($title) ? e($title) : "- FerryMVC" ?></title>
+    <title><?= sitename() ? sitename() : 'FerryMVC' ?></title>
 </head>
 
 <body>

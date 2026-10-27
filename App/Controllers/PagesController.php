@@ -12,14 +12,14 @@ class PagesController extends Controller
     public function index()
     {
         echo $this->view('pages/index', [
-            'title' => 'welcome',
+            'title' => 'Welcome',
         ]);
     }
 
     public function about()
     {
         echo $this->view('pages/about', [
-            'title' => 'about',
+            'title' => 'About Us',
         ]);
     }
 }

@@ -22,10 +22,15 @@ function urlroot(string $path = ''): string
 
 function approot(string $path = ''): string
 {
-    return dirname(dirname(__FILE__)) . $path;
+    return dirname(__DIR__, 2) . '/' . ltrim($path, '/');
 }
 
 function partials(string $path = ''): string
 {
     return dirname(dirname(__FILE__)) . '/App/views/partials/' . ltrim($path, '/');
+}
+
+function sitename(): string
+{
+    return 'FerryMVC';
 }
