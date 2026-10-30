@@ -74,14 +74,19 @@ class Core
 
     public function getUrl(): array
     {
-        $value = $_GET['url'];
-        if (!isset($value) && !is_string($value)) {
+        $value = $_GET['url'] ?? '';
+        if (is_string($value)) {
             return [];
         }
 
-        $url = ltrim($value, '/');
-        $url = filter_var($url, FILTER_SANITIZE_URL);
+        $url = filter_var($value, FILTER_SANITIZE_URL);
+        if ($url === '') {
+            return [];
+        }
+
+        $url = trim($url, '/');
         $url = explode('/', $url);
+        $url = array_values(array_filter($url, fn($seg) => $seg !== ''));
 
         return $url;
     }

@@ -1,22 +1,6 @@
-<?php
+<?php require partials('_header.php'); ?>
 
-use App\Entities\Post;
-
-/**
- * @var string $title
- * @var Post[] $posts
- */
-
-require partials('_header.php');
-
-?>
-
-<h1><?php isset($title) ? e($title) : 'Pages' ?></h1>
-
-<ul>
-    <?php foreach ($posts as $post): ?>
-        <li><?php e($post->title) ?></li>
-    <?php endforeach; ?>
-</ul>
+<h1><?php echo e($title) ?? '';  ?></h1>
+<p>This is FerryMVC PHP framework. Please refer to the docs on how to use it</p>
 
 <?php require partials('_footer.php'); ?>

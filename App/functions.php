@@ -17,7 +17,7 @@ function e(string $value)
 
 function urlroot(string $path = ''): string
 {
-    return '/ferry-mvc/' . ltrim($path, '/');
+    return '/_YOUR_URL_/' . ltrim($path, '/');
 }
 
 function approot(string $path = ''): string
@@ -32,5 +32,5 @@ function partials(string $path = ''): string
 
 function sitename(): string
 {
-    return 'FerryMVC';
+    return '_YOUR_SITE_NAME_';
 }
