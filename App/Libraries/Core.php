@@ -75,7 +75,7 @@ class Core
     public function getUrl(): array
     {
         $value = $_GET['url'] ?? '';
-        if (is_string($value)) {
+        if (!is_string($value)) {
             return [];
         }
 
